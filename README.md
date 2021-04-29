@@ -8,7 +8,7 @@ This a nodejs application for transfrom the data based on Required condition. wh
 # Install dependencies
 `npm install`
 # How to run
-change **PORT** from **  .env**  file (optional)
+change **PORT** from **.env**  file (optional)
 
 `node index.js`
 
