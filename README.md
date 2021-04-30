@@ -14,6 +14,11 @@ change **PORT** from **.env**  file (optional)
 
 This will run node server at localhost:3000. Once server started open postman and using POST method you can access the URL http://localhost:3000/payload
 
+# How to Test using Mocha & Chai
+`npm test`
+
+[![Response](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/testCaseResult.png "Response")](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/testCaseResult.png "Response")
+
 # Request Payload
 `{"payload":{"name":"subscriber","valueType":"array","value":[{"name":"MN","valueType":"string","value":"{REF_MSISDN}"},{"name":"IM","valueType":"string","value":"{REF_IMSI}"},{"name":"NT","valueType":"string","value":"G"},{"name":"privateUser","valueType":"array","value":[{"name":"privateUserId","valueType":"string","value":"{REF_IMSI}@ims.mnc001.mcc505.3gppnetwork.org"},{"name":"roamingAllowed","valueType":"string","value":"false"},{"name":"publicUser","valueType":"array","value":[{"name":"publicIdValue","valueType":"string","value":"sip:{REF_IMSI}@ims.mnc001.mcc505.3gppnetwork.org"},{"name":"implicitRegSet","valueType":"string","value":"1"},{"name":"serviceProfileId","valueType":"string","value":"{REF_SERVPROFID}"},{"name":"testUser","valueType":"array","value":[{"name":"testIdValue","valueType":"string","value":"sip:{REF_IMSI}@ims.mod-connect.com"},{"name":"implicitRegSet","valueType":"string","value":"2"}]}]},{"name":"userImsi","valueType":"string","value":"{REF_IMSI}"}]},{"name":"PO","valueType":"string","value":"0"}]},"referenceData":{"REF_MSISDN":"0406679321","REF_IMSI":"50002312344314","REF_SERVPROFID":"2"}}`
 
@@ -28,3 +33,7 @@ This will run node server at localhost:3000. Once server started open postman an
 [![Response](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/jsonEditorResponseScreen.png "Response")](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/jsonEditorResponseScreen.png "Response")
 
 [![Response](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/response2.png "Response")](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/response2.png "Response")
+
+[![Response](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/testCases.png "Response")](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/testCases.png "Response")
+
+[![Response](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/testCaseResult.png "Response")](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/testCaseResult.png "Response")
