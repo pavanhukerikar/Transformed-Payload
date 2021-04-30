@@ -5,6 +5,12 @@ const port = process.env.PORT || 3001;
 const indexControlller = require('./controller/index.controller');
 
 app.use(express.json());
+
+//get request
+app.get('/', (req, res)=> {
+    res.send('App running successfully!');
+})
+//post request
 app.post('/payload', (req, res) => {
     try{
         const {body} = req;
@@ -13,6 +19,7 @@ app.post('/payload', (req, res) => {
         
         if (Object.keys(body).length == 0 || Object.keys(payload).length == 0 || Object.keys(refData).length == 0){
             res.status(400).json({message: "Please enter payload & refdata"});
+            return;
         }
         let data = indexControlller.modifyData(payload, refData)
         res.status(200).send(data)
@@ -26,3 +33,5 @@ app.post('/payload', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
+
+module.exports = app;
