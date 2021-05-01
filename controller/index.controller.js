@@ -10,7 +10,7 @@ const modifyData = (payload, refData) => {
 function getPayloadValue(payload, refData) {
     payload.value.forEach(val => {
         if(val.valueType === 'string'){
-            console.log(val);
+            //console.log(val);
             replaceValue(val, refData);
         } else {
             getPayloadValue(val, refData);
@@ -18,7 +18,7 @@ function getPayloadValue(payload, refData) {
     });
     return payload
 }
-
+// this function is used to get value and replace with ref value
 function replaceValue(obj, refData) {
     if (obj.value.includes('REF')) { 
         // logic without using javascript inbuild function
@@ -39,7 +39,7 @@ function replaceValue(obj, refData) {
         console.log("splitValue2");
         console.log(splitValue2);
         console.log(refData[splitValue2[0]]); */
-        console.log(obj.value)
+        //console.log(obj.value)
     }
 }
 module.exports = {modifyData};

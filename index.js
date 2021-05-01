@@ -3,7 +3,7 @@ const app = express();
 require('dotenv').config();
 const port = process.env.PORT || 3001;
 const indexControlller = require('./controller/index.controller');
-
+const { postValidationRules, validate } = require('./helpers/validator');
 app.use(express.json());
 
 //get request
@@ -11,7 +11,7 @@ app.get('/', (req, res)=> {
     res.send('App running successfully!');
 })
 //post request
-app.post('/payload', (req, res) => {
+app.post('/payload', postValidationRules(), validate, (req, res) => {
     try{
         const {body} = req;
         let payload = body.payload
