@@ -34,6 +34,11 @@ This will run node server at localhost:3000. Once server started open postman an
 
 [![Response](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/response2.png "Response")](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/response2.png "Response")
 
+## Testcases
 [![Response](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/testCases.png "Response")](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/testCases.png "Response")
 
+## Test cases result
+[![Response](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/testCaseResult.png "Response")](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/testCaseResult.png "Response")
+
+## Validations
 [![Response](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/testCaseResult.png "Response")](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/testCaseResult.png "Response")
