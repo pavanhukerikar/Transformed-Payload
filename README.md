@@ -21,12 +21,12 @@ This will run node server at localhost:3000. Once server started open postman an
 
 # Docker
 Create Dockerfile and copy bellow code
-`FROM node:14`
-`WORKDIR E:\pavan\pavanhukerikar  `
-`COPY package*.json ./`
-`RUN npm install`
-`EXPOSE 3000`
-`CMD [ "node", "server.js" ]`
+1. `FROM node:14`
+2. `WORKDIR E:\pavan\pavanhukerikar  `
+3. `COPY package*.json ./`
+4. `RUN npm install`
+5. `EXPOSE 3000`
+6. `CMD [ "node", "server.js" ]`
 
 To create docker image run command
 `docker build . -t pavan/node-web-app`
