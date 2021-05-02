@@ -2,6 +2,7 @@ const express = require('express')
 const app = express();
 require('dotenv').config();
 const port = process.env.PORT || 3001;
+const host = process.env.HOST || '0.0.0.0';
 const indexControlller = require('./controller/index.controller');
 const { postValidationRules, validate } = require('./helpers/validator');
 app.use(express.json());
@@ -31,7 +32,7 @@ app.post('/payload', postValidationRules(), validate, (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Example app listening at http://${HOST}:${port}`)
 })
 
 module.exports = app;
