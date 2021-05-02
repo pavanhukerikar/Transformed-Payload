@@ -19,6 +19,30 @@ This will run node server at localhost:3000. Once server started open postman an
 
 [![Response](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/testCaseResult.png "Response")](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/testCaseResult.png "Response")
 
+# Docker
+Create Dockerfile and copy bellow code
+`FROM node:14`
+`WORKDIR E:\pavan\pavanhukerikar  `
+`COPY package*.json ./`
+`RUN npm install`
+`EXPOSE 3000`
+`CMD [ "node", "server.js" ]`
+
+To create docker image run command
+`docker build . -t pavan/node-web-app`
+
+To Run the image
+`docker run -p 8080:3000 -d pavan/node-web-app`
+
+[![Response](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/dockerBuild.png "dockerBuild")](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/dockerBuild.png "dockerBuild")
+
+[![Response](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/DockerImageApp.png "DockerImageApp")](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/DockerImageApp.png "Response")
+
+[![Response](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/docker.png "docker")](https://github.com/pavanhukerikar/Transformed-Payload/blob/master/screenshots/docker.png "docker")
+
+
+
+
 # Request Payload
 `{"payload":{"name":"subscriber","valueType":"array","value":[{"name":"MN","valueType":"string","value":"{REF_MSISDN}"},{"name":"IM","valueType":"string","value":"{REF_IMSI}"},{"name":"NT","valueType":"string","value":"G"},{"name":"privateUser","valueType":"array","value":[{"name":"privateUserId","valueType":"string","value":"{REF_IMSI}@ims.mnc001.mcc505.3gppnetwork.org"},{"name":"roamingAllowed","valueType":"string","value":"false"},{"name":"publicUser","valueType":"array","value":[{"name":"publicIdValue","valueType":"string","value":"sip:{REF_IMSI}@ims.mnc001.mcc505.3gppnetwork.org"},{"name":"implicitRegSet","valueType":"string","value":"1"},{"name":"serviceProfileId","valueType":"string","value":"{REF_SERVPROFID}"},{"name":"testUser","valueType":"array","value":[{"name":"testIdValue","valueType":"string","value":"sip:{REF_IMSI}@ims.mod-connect.com"},{"name":"implicitRegSet","valueType":"string","value":"2"}]}]},{"name":"userImsi","valueType":"string","value":"{REF_IMSI}"}]},{"name":"PO","valueType":"string","value":"0"}]},"referenceData":{"REF_MSISDN":"0406679321","REF_IMSI":"50002312344314","REF_SERVPROFID":"2"}}`
 
